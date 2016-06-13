@@ -1,0 +1,41 @@
+﻿@model WebSite.ViewModels.Auth.LogInViewModel
+
+@{
+    ViewBag.Title = "Log In";
+}
+
+<div class="page-header">
+    <h1>Log In</h1>
+</div>
+
+<p>
+    Default admin account is admin@example.com / qwerty.
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm(null, null, FormMethod.Post))
+        {
+            @Html.ValidationSummary(false, "")
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserName)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.DisplayNameFor(m => m.RememberMe)
+                </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary pull-right">Log In</button>
+        }
+    </div>
+</div>

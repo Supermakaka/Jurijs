@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Company List";
+}
+
+<div class="page-header page-header-with-actions">
+    <h1 class="pull-left">Companies</h1>
+    <div class="actions pull-right">
+        <button type="button" class="btn btn-primary" id="btn-company-create"><i class="glyphicon glyphicon-plus"></i> New company</button>
+    </div>
+</div>
+
+<div data-table-with-filters>
+    <div class="dt-filters">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label for="name-filter">Company Name</label>
+                    <input id="name-filter" class="form-control input-sm" type="text" data-column-name="Name" placeholder="Company Name"  data-filter />
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="company-list" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th class="actions-column">Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<script id="column-actions-template" type="text/x-handlebars-template">
+    <div class="btn-group">
+        <a class="btn btn-default btn-sm btn-company-edit" data-id="{{id}}" title="Edit"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+        <a class="btn btn-default btn-sm btn-company-delete" data-id="{{id}}" title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
+    </div>
+</script>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/admin-company-scripts")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            companyList.onReady($('#company-list'));
+
+        });
+
+    </script>
+}

@@ -1,0 +1,18 @@
+﻿@model WebSite.ViewModels.Admin.CompanyFormViewModel
+
+@using (Html.BeginForm("DeleteCompany", "Admin", FormMethod.Post, new { data_notification_success = "Company deleted." }))
+{
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+    </div>
+    <div class="modal-body">
+        <div data-validation-error-paceholder />
+        <p>Are you sure you want to delete the company "@Model.Name"?</p>
+        @Html.HiddenFor(m => m.Id)
+    </div>
+    <div class="modal-footer text-right">
+        <button class="btn btn-primary" type="submit" data-loading-text="Deleting...">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    </div>
+}

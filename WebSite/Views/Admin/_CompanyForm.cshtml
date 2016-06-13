@@ -1,0 +1,10 @@
+﻿@model WebSite.ViewModels.Admin.CompanyFormViewModel
+
+@Html.ValidationSummary()
+
+@Html.HiddenFor(model => model.Id)
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+</div>

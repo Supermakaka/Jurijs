@@ -1,0 +1,66 @@
+﻿@model PagedList.PagedList<WebSite.ViewModels.Orders.UserOrderListViewModel>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<div class="page-header page-header-with-actions">
+    <h1 class="pull-left">Orders</h1>
+    <div class="actions pull-right">
+        <a href="@Url.Action("CreateOrder")" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> New Order</a>
+    </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().ID)</th>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Name)</th>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Price)</th>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().Description)</th>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().FirstName)</th>
+      <th>@Html.DisplayNameFor(m => m.FirstOrDefault().LastName)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var order in Model)
+    {
+        <tr>
+            <td>@order.ID</td>
+            <td>@order.Name</td>
+            <td>@order.Price</td>
+            <td>@order.Description</td>
+            <td>@order.FirstName</td>
+            <td>@order.LastName</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default btn-sm" href="@Url.Action("EditOrder", new { id = order.ID })" title="Edit"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+                    <a class="btn btn-default btn-sm btn-disable" data-user-id="@order.ID" href="#" title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+    }
+  </tbody>
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("OrderList", new { page = page }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+<script type="text/javascript">
+    $(document).on("click", ".btn-disable", function()
+    {
+        var btn = $(this);
+
+        $.post(
+            '@Url.Action("DeleteOrder", "Admin")',
+            { id: btn.attr("data-user-id") },
+            function (data)
+            {
+                location.reload();
+            }
+        );
+
+        return false;
+    });
+</script>

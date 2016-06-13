@@ -1,0 +1,18 @@
+﻿@model WebSite.ViewModels.Admin.UserFormViewModel
+
+@using (Html.BeginForm("DeleteUser", "Admin", FormMethod.Post, new { data_notification_success = "User deleted." }))
+{
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+    </div>
+    <div class="modal-body">
+        <div data-validation-error-paceholder />
+        <p>Are you sure you want to delete the user "@Model.FullName"?</p>
+        @Html.HiddenFor(model => model.Id)
+    </div>
+    <div class="modal-footer text-right">
+        <button class="btn btn-primary" type="submit" data-loading-text="Deleting...">Yes</button>
+        <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+    </div>
+}

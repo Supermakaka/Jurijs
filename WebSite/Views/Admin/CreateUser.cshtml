@@ -1,0 +1,16 @@
+﻿@model WebSite.ViewModels.Admin.UserFormViewModel
+
+@using (Html.BeginForm("CreateUser", "Admin", FormMethod.Post, new { data_notification_success = "User created." }))
+{
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create New User</h4>
+    </div>
+    <div class="modal-body">
+        @Html.Partial("_UserForm", Model)
+    </div>
+    <div class="modal-footer text-right">
+        <button type="submit" class="btn btn-primary" data-loading-text="Saving...">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    </div>
+}

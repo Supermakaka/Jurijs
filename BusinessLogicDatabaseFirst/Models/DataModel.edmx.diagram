@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7511ced367764bd1b08381b4717c5c45" Name="Diagram1">
+        <EntityTypeShape EntityType="BusinessLogic.Models.Company" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLogic.Models.Role" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLogic.Models.User" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLogic.Models.UserClaim" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLogic.Models.UserLogin" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLogic.Models.UserRole" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="BusinessLogic.Models.FK_dbo_User_dbo_Company_CompanyId" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessLogic.Models.FK_dbo_UserRole_dbo_Role_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessLogic.Models.FK_dbo_UserClaim_dbo_User_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessLogic.Models.FK_dbo_UserLogin_dbo_User_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessLogic.Models.FK_dbo_UserRole_dbo_User_UserId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,52 @@
+﻿@model WebSite.ViewModels.Account.RegisterViewModel
+@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "Create an account";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="login-wrap">
+                <div class="login-logo">
+                    <img src="http://placehold.it/100x100/?text=LOGO" alt="" />
+                </div>
+                <h2 class="login-header">Create an account</h2>
+                <div class="panel panel-default panel-login">
+                    <div class="panel-body">
+                        @using (Html.BeginForm(null, null, FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.FullName)
+                                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.FullName)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email)
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password)
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Password)
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+                        }
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        Already have an account? <a href="@Url.Action("LogIn")">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
