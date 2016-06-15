@@ -1,0 +1,16 @@
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\BusinessLogic.dll.config
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\BusinessLogic.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\BusinessLogic.pdb
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\EntityFramework.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\EntityFramework.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\obj\Debug\BusinessLogic.IdentityStores.Resources.resources
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\obj\Debug\BusinessLogicDatabaseFirst.csproj.GenerateResource.Cache
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\obj\Debug\BusinessLogic.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\obj\Debug\BusinessLogic.pdb
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicDatabaseFirst\obj\Debug\BusinessLogicDatabaseFirst.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\BusinessLogic.dll.config
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\BusinessLogic.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\BusinessLogic.pdb
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\EntityFramework.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\EntityFramework.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\obj\Debug\BusinessLogic.dll
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\obj\Debug\BusinessLogic.pdb
+D:\Projects\NewLatCarrier\Jurijs\BusinessLogicCodeFirst\obj\Debug\BusinessLogicCodeFirst.csprojResolveAssemblyReference.cache

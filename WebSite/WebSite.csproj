@@ -577,9 +577,9 @@
     <Content Include="Scripts\jquery-2.2.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogicDatabaseFirst\BusinessLogicDatabaseFirst.csproj">
+    <ProjectReference Include="..\BusinessLogicDatabaseFirst\BusinessLogic.csproj">
       <Project>{24eb990a-162d-411d-83a3-a380c2a7cd8e}</Project>
-      <Name>BusinessLogicDatabaseFirst</Name>
+      <Name>BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\MailSender\MessageServices.csproj">
       <Project>{1e978576-ff7d-4f25-a0a7-0bab36289b1f}</Project>

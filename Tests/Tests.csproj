@@ -137,9 +137,9 @@
     <Compile Include="WebSite.Tests\Controllers\AdminControllerTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogicCodeFirst\BusinessLogicCodeFirst.csproj">
-      <Project>{ad6336fb-4776-4c61-8819-a70e4d3dd3f6}</Project>
-      <Name>BusinessLogicCodeFirst</Name>
+    <ProjectReference Include="..\BusinessLogicDatabaseFirst\BusinessLogic.csproj">
+      <Project>{24eb990a-162d-411d-83a3-a380c2a7cd8e}</Project>
+      <Name>BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebSite\WebSite.csproj">
       <Project>{9a4fe87a-a3d7-43fb-88da-e8cbcf65df05}</Project>

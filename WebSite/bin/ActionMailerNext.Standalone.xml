@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActionMailerNext.Standalone</name>
+    </assembly>
+    <members>
+        <member name="T:ActionMailerNext.Standalone.Helpers.ExtendedTemplateBase`1">
+            <summary>
+            Extended Template base to add additional HTML Helpers
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String)">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name and route values
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String,System.Object)">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name and route values
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name and route values
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String,System.Object,System.String)">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name, route values and protocol to use.
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <param name="protocol">The protocol for the URL, such as "http" or "https".</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name, route values and protocol to use.
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <param name="protocol">The protocol for the URL, such as "http" or "https".</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneUrlHelpers`1.Action(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Generates a fully qualified URL for an action method by using the specified action name, controller name, route values, protocol to use and host name.
+            </summary>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <param name="protocol">The protocol for the URL, such as "http" or "https".</param>
+            <param name="hostName">The host name for the URL.</param>
+            <returns>The fully qualified URL to an action method..</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:ActionMailerNext.Standalone.RazorEmailResult">
+            <summary>
+                An container for MailMessage with the appropriate body rendered by Razor.
+            </summary>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorEmailResult.#ctor(ActionMailerNext.MailAttributes,System.String,System.Text.Encoding,System.String,System.String,RazorEngine.Templating.ITemplateService,RazorEngine.Templating.DynamicViewBag)">
+            <summary>
+                Creates a new EmailResult.  You must call Compile() before this result
+                can be successfully delivered.
+            </summary>
+            <param name="interceptor">The IMailInterceptor that we will call when delivering MailAttributes.</param>
+            <param name="sender">The IMailSender that we will use to send MailAttributes.</param>
+            <param name="mailAttributes"> message who's body needs populating.</param>
+            <param name="viewName">The view to use when rendering the message body.</param>
+            <param name="masterName">the main layout</param>
+            <param name="viewPath">The path where we should search for the view.</param>
+            <param name="templateService">The template service defining a ITemplateResolver and a TemplateBase</param>
+            <param name="viewBag">The viewBag is a dynamic object that can transfer data to the view</param>
+            <param name="messageEncoding"></param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorEmailResult.Compile``1(``0,System.Boolean)">
+            <summary>
+                Compiles the email body using the specified Razor view and model.
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorEmailResult.MailAttributes">
+            <summary>
+                The underlying MailMessage object that was passed to this object's constructor.
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorEmailResult.MessageEncoding">
+            <summary>
+                The default encoding used to send a messageBase.
+            </summary>
+        </member>
+        <member name="T:ActionMailerNext.Standalone.RazorMailerBase">
+            <summary>
+                This is a standalone MailerBase that relies on RazorEngine to generate emails.
+            </summary>
+        </member>
+        <member name="F:ActionMailerNext.Standalone.RazorMailerBase.templateService">
+            <summary>
+            We use a singleton instance of the templating service in the mailer, to facilitate 
+            caching of resolved and compiled views.
+            </summary>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.#ctor(ActionMailerNext.MailAttributes,ActionMailerNext.Interfaces.IMailSender)">
+            <summary>
+                Initializes MailerBase using the default SmtpMailSender and system Encoding.
+            </summary>
+            <param name="mailAttributes"></param>
+            <param name="mailSender">The underlying mail sender to use for delivering mail.</param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.ActionMailerNext#Interfaces#IMailInterceptor#OnMailSending(ActionMailerNext.MailSendingContext)">
+            <summary>
+                This method is called before each mail is sent
+            </summary>
+            <param name="context">
+                A simple context containing the mail
+                and a boolean value that can be toggled to prevent this
+                mail from being sent.
+            </param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.ActionMailerNext#Interfaces#IMailInterceptor#OnMailSent(ActionMailerNext.MailAttributes)">
+            <summary>
+                This method is called after each mail is sent.
+            </summary>
+            <param name="mail">The mail that was sent.</param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.OnMailSent(ActionMailerNext.MailAttributes)">
+            <summary>
+                This method is called when onMailsent is fired.
+            </summary>
+            <param name="mail"></param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.Email(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+                Constructs your mail message ready for delivery.
+            </summary>
+            <param name="viewName">The view to use when rendering the message body.</param>
+            <param name="masterName">the main layout</param>
+            <param name="trimBody">Whether or not we should trim whitespace from the beginning and end of the message body.</param>
+            <param name="externalViewPath">a View path that overrides the one set by the property</param>
+            <returns>An EmailResult that you can Deliver();</returns>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.Email``1(System.String,``0,System.String,System.Boolean,System.String)">
+            <summary>
+                Constructs your mail message ready for delivery.
+            </summary>
+            <param name="viewName">The view to use when rendering the message body.</param>
+            <param name="model">The model object used while rendering the message body.</param>
+            <param name="masterName">the main layout</param>
+            <param name="trimBody">Whether or not we should trim whitespace from the beginning and end of the message body.</param>
+            <param name="externalViewPath">a View path that overrides the one set by the property</param>
+            <returns>An EmailResult that you can Deliver();</returns>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.RazorMailerBase.PreCompileViews(System.Collections.Generic.IDictionary{System.String,System.Type})">
+            <summary>
+            Pre-Compiles the views in the dictionary using a the template resolver
+            </summary>
+            <param name="views"></param>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.MailAttributes">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.GlobalViewPath">
+            <summary>
+                The path to the folder containing your Razor views.
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.ViewSettings">
+            <summary>
+                The view settings needed to implement HTML/URL Helpers
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.MailSender">
+            <summary>
+                The underlying IMailSender to use for outgoing messages.
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.TemplateResolver">
+            <summary>
+                A template resolver that is used to find the appropriate templates
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.TemplateBaseType">
+            <summary>
+                A template base that can add more features to RazorEngine
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.RazorMailerBase.ViewBag">
+            <summary>
+                Used to add needed variable
+            </summary>
+        </member>
+        <member name="T:ActionMailerNext.Standalone.Helpers.ExtendedTemplateResolver">
+            <summary>
+                The ExtendedTemplateResolver tries to locate the templates using the standard search pattern of MVC
+                and reads their content.
+            </summary>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.ExtendedTemplateResolver.#ctor(System.String)">
+            <summary>
+                Creates a template resolver using the specified path.  If no path is given, this defaults to "Views"
+            </summary>
+            <param name="viewPath">The path containing your views</param>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.ExtendedTemplateResolver.Resolve(System.String)">
+            <summary>
+                Searches the view path for the given template and returns the contents of the view.
+                Throws a TemplateResolvingException if no views could be found.
+            </summary>
+            <param name="name">The name of the view to search for</param>
+            <returns>The contents of any views found.</returns>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String)">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action and controller.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <returns>An anchor element (a element).</returns>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, and route values.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">An Object that contains the parameters for a route.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, and route values as a route value dictionary.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, route values, and HTML attributes.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">An Object that contains the parameters for a route.</param>
+            <param name="htmlAttributes">An Object that contains the HTML attributes to set for the element.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, route values as a route value dictionary, and HTML attributes as a dictionary.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <param name="htmlAttributes">Dictionary that contains the HTML attributes to set for the element.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, protocol, host name, route values, and HTML attributes.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="protocol">The protocol for the URL, such as "http" or "https".</param>
+            <param name="hostName">The host name for the URL.</param>
+            <param name="routeValues">An Object that contains the parameters for a route.</param>
+            <param name="htmlAttributes">An Object that contains the HTML attributes to set for the element.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ActionMailerNext.Standalone.Helpers.StandaloneHtmlHelpers`1.ActionLink(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns an anchor element (a element) for the specified link text, action, controller, protocol, host name, route values as a route value dictionary, and HTML attributes as a dictionary.
+            </summary>
+            <param name="linkText">The inner text of the anchor element.</param>
+            <param name="actionName">The name of the action.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="protocol">The protocol for the URL, such as "http" or "https".</param>
+            <param name="hostName">The host name for the URL.</param>
+            <param name="routeValues">Dictionary that contains the parameters for a route.</param>
+            <param name="htmlAttributes">Dictionary that contains the HTML attributes to set for the element.</param>
+            <returns>An anchor element (a element).</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:ActionMailerNext.Standalone.TemplateResolvingException">
+            <summary>
+                Exception thrown when a template could not be resolved
+            </summary>
+        </member>
+        <member name="P:ActionMailerNext.Standalone.TemplateResolvingException.SearchPaths">
+            <summary>
+                A list of paths that were checked when searching for a template.
+            </summary>
+        </member>
+    </members>
+</doc>

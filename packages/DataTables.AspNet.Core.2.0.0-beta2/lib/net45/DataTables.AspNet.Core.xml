@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataTables.AspNet.Core</name>
+    </assembly>
+    <members>
+        <member name="T:DataTables.AspNet.Core.IColumn">
+            <summary>
+            Defines DataTables column members.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.Name">
+            <summary>
+            Gets column name.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.Field">
+            <summary>
+            Gets column field.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.IsSearchable">
+            <summary>
+            Gets column searchable indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.Search">
+            <summary>
+            Gets column search definition or null if column is not searchable.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.IsSortable">
+            <summary>
+            Gets column sortable indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IColumn.Sort">
+            <summary>
+            Gets column sort definition or null if column is not sortable.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IColumn.SetSort(System.Int32,System.String)">
+            <summary>
+            Sets column sort definition.
+            </summary>
+            <param name="order">Sort order.</param>
+            <param name="direction">Sort direction.</param>
+            <returns>True if sort could be set, False otherwise.</returns>
+        </member>
+        <member name="T:DataTables.AspNet.Core.IDataTablesRequest">
+            <summary>
+            Defined a DataTables request.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.Draw">
+            <summary>
+            Gets draw counter.
+            This is used by DataTables to ensure that the Ajax returns from server-side procesing request are drawn in sequence by DataTables.
+            Ajax requests are asynchronous and thus can return out of sequence.
+            This is used as part of the 'Draw' return parameter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.Start">
+            <summary>
+            Gets paging first record indicator.
+            This is the start point in the current data set (zero index based).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.Length">
+            <summary>
+            Gets the number of records that the table can display in the current draw.
+            It is expected that the number of records returned will be equal to this number, unless the server has fewer records to return.
+            Note that this can be -1 to indicate that all records should be returned (although that negates any benefits of server-side processing!).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.Search">
+            <summary>
+            Gets global search.
+            To be applied to all searchable columns.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.Columns">
+            <summary>
+            Gets DataTables column collection (from client-side).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesRequest.AdditionalParameters">
+            <summary>
+            Gets the user-defined collection of parameters.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Core.IDataTablesResponse">
+            <summary>
+            Defines a DataTables response.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.Draw">
+            <summary>
+            Gets draw counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.TotalRecords">
+            <summary>
+            Gets total records counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.TotalRecordsFiltered">
+            <summary>
+            Gets total filtered records counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.Data">
+            <summary>
+            Gets data for the response.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.Error">
+            <summary>
+            Gets the error message.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IDataTablesResponse.AdditionalParameters">
+            <summary>
+            Gets aditional parameters to send back to the client-side.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Core.IOptions">
+            <summary>
+            Defines DataTables option members and methods.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.DefaultPageLength">
+            <summary>
+            Gets the default page length.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.IsDrawValidationEnabled">
+            <summary>
+            Gets the indicator whether draw validation is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.IsRequestAdditionalParametersEnabled">
+            <summary>
+            Gets the indicator whether aditional request parameters parsing is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.IsResponseAdditionalParametersEnabled">
+            <summary>
+            Gets the indicator whether aditional response parameters parsing is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.RequestNameConvention">
+            <summary>
+            Gets request name conventions.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.IOptions.ResponseNameConvention">
+            <summary>
+            Gets response name conventions.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.SetDefaultPageLength(System.Int32)">
+            <summary>
+            Sets default page length.
+            </summary>
+            <param name="defaultPageLength">Default page length to use.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.EnableDrawValidation">
+            <summary>
+            Enables draw validation.
+            Draw validation is enabled by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.DisableDrawValidation">
+            <summary>
+            Disables draw validation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.EnableRequestAdditionalParameters">
+            <summary>
+            Enables request aditional parameter parsing.
+            You must also provide your own custom parsing function on registration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.DisableRequestAdditionalParameters">
+            <summary>
+            Disables request aditional parameter parsing.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.EnableResponseAdditionalParameters">
+            <summary>
+            Enables response aditional parameter parsing.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.DisableResponseAdditionalParameters">
+            <summary>
+            Disables response aditional parameter parsing.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.UseCamelCase">
+            <summary>
+            Forces DataTables to use CamelCase naming convention.
+            CamelCase is enabled by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Core.IOptions.UseHungarianNotation">
+            <summary>
+            Forces DataTables to use HungarianNotation naming convention.
+            HungarianNotation is available for compatibility with older DataTables (prior to 1.10).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DataTables.AspNet.Core.ISearch.Value">
+            <summary>
+            Search value.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.ISearch.IsRegex">
+            <summary>
+            Flag to indicate if the search term for this column should be treated as regular expression (true) or not (false).
+            Normally server-side processing scripts will not perform regular expression searching for performance reasons on large data sets, but it is technically possible and at the discretion of your script.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.ISort.Order">
+            <summary>
+            Indicates the sort order for composed (multi) sorting.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.ISort.Direction">
+            <summary>
+            Ordering direction for this column.
+            It will be 'Ascending' or 'Descending' to indicate ordering direction.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Core.SortDirection">
+            <summary>
+            Defines directions for column sorting.
+            </summary>
+        </member>
+        <member name="F:DataTables.AspNet.Core.SortDirection.Ascending">
+            <summary>
+            Represents an ascendant sorting (default).
+            </summary>
+        </member>
+        <member name="F:DataTables.AspNet.Core.SortDirection.Descending">
+            <summary>
+            Represents a descendant sorting.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Core.NameConvention.IRequestNameConvention">
+            <summary>
+            Define name convention for request parameters.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.Draw">
+            <summary>
+            Gets template for draw.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.Start">
+            <summary>
+            Gets template for data start counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.Length">
+            <summary>
+            Gets template for data page length.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.SearchValue">
+            <summary>
+            Gets template for global search value.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.IsSearchRegex">
+            <summary>
+            Gets template for global search regex indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.SortField">
+            <summary>
+            Gets template for each sort field name.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.SortDirection">
+            <summary>
+            Gets template for each sort direction.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.ColumnField">
+            <summary>
+            Gets template for each column field.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.ColumnName">
+            <summary>
+            Gets template for each column name.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.IsColumnSearchable">
+            <summary>
+            Gets template for each column searchable indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.IsColumnSortable">
+            <summary>
+            Gets template for each column sortable indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.ColumnSearchValue">
+            <summary>
+            Gets template for each column search value.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.IsColumnSearchRegex">
+            <summary>
+            Gets template for each column search regex indicator.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.SortAscending">
+            <summary>
+            Gets template for ascending sort.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IRequestNameConvention.SortDescending">
+            <summary>
+            Gets template for descending sort.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Core.NameConvention.IResponseNameConvention">
+            <summary>
+            Define name convention for response parameters.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IResponseNameConvention.Draw">
+            <summary>
+            Gets template for draw.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IResponseNameConvention.TotalRecords">
+            <summary>
+            Gets template for total recordd counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IResponseNameConvention.TotalRecordsFiltered">
+            <summary>
+            Gets template for total filtered records counter.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IResponseNameConvention.Data">
+            <summary>
+            Gets template for data.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Core.NameConvention.IResponseNameConvention.Error">
+            <summary>
+            Gets template for error.
+            </summary>
+        </member>
+    </members>
+</doc>

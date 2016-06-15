@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="IdentityStores\RoleStore.cs" />
     <Compile Include="IdentityStores\UserStore.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
     <Compile Include="Models\InMemoryDataContext.cs" />
     <Compile Include="Models\Company.cs" />

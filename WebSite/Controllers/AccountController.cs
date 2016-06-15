@@ -387,7 +387,7 @@ namespace WebSite.Controllers
                     Email = model.Email,
                     CreateDate = DateTime.UtcNow,
                     FullName = info?.ExternalIdentity.Name,
-                    Roles = new List<UserRole>() { new UserRole { RoleId = 2 } } //add default user role
+                    //Roles = new List<UserRole>() { new UserRole { RoleId = 2 } } //add default user role
                 };
 
                 var result = await userManager.CreateAsync(user);

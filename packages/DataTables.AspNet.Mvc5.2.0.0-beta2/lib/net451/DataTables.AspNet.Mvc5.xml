@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataTables.AspNet.Mvc5</name>
+    </assembly>
+    <members>
+        <member name="T:DataTables.AspNet.Mvc5.Column">
+            <summary>
+            Represents a DataTables column.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.Configuration">
+            <summary>
+            Handles DataTables.AspNet registration and holds default (global) configuration options.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Configuration.Options">
+            <summary>
+            Get's DataTables.AspNet runtime options for server-side processing.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.#cctor">
+            <summary>
+            Static constructor.
+            Set's default configuration for DataTables.AspNet.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables(DataTables.AspNet.Core.IOptions)">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+            <param name="options">DataTables.AspNet options.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables(DataTables.AspNet.Mvc5.ModelBinder)">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+            <param name="requestModelBinder">Request model binder to use when resolving 'IDataTablesRequest' models.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables(System.Func{System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext,System.Collections.Generic.IDictionary{System.String,System.Object}},System.Boolean)">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+            <param name="parseRequestAdditionalParameters">Function to evaluate request additional parameters sent to the server.</param>
+            <param name="parseResponseAdditionalParameters">Indicates if additional parameters will be sent to the response.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables(DataTables.AspNet.Core.IOptions,DataTables.AspNet.Mvc5.ModelBinder)">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+            <param name="options">DataTables.AspNet options.</param>
+            <param name="requestModelBinder">Model binder to use when resolving 'IDataTablesRequest' model.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Configuration.RegisterDataTables(DataTables.AspNet.Core.IOptions,DataTables.AspNet.Mvc5.ModelBinder,System.Func{System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext,System.Collections.Generic.IDictionary{System.String,System.Object}},System.Boolean)">
+            <summary>
+            Provides DataTables.AspNet registration for Asp.Net MVC 5 projects.
+            </summary>
+            <param name="options">DataTables.AspNet options.</param>
+            <param name="requestModelBinder">Request model binder to use when resolving 'IDataTablesRequest' models.</param>
+            <param name="parseRequestAdditionalParameters">Function to evaluate request additional parameters sent to the server.</param>
+            <param name="parseResponseAdditionalParameters">Indicates if additional parameters will be sent to the response.</param>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.DataTablesExtensions">
+            <summary>
+            Provides extension methods for DataTables response creation.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesExtensions.CreateResponse(DataTables.AspNet.Core.IDataTablesRequest,System.String)">
+            <summary>
+            Creates a DataTables response object.
+            </summary>
+            <param name="request">The DataTables request object.</param>
+            <param name="errorMessage">Error message to send back to client-side.</param>
+            <returns>A DataTables response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesExtensions.CreateResponse(DataTables.AspNet.Core.IDataTablesRequest,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Creates a DataTables response object.
+            </summary>
+            <param name="request">The DataTables request object.</param>
+            <param name="errorMessage">Error message to send back to client-side.</param>
+            <param name="additionalParameters">Aditional parameters dictionary.</param>
+            <returns>A DataTables response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesExtensions.CreateResponse(DataTables.AspNet.Core.IDataTablesRequest,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Creates a DataTables response object.
+            </summary>
+            <param name="request">The DataTables request object.</param>
+            <param name="totalRecords">Total records count (total available non-filtered records on database).</param>
+            <param name="totalRecordsFiltered">Total filtered records (total available records after filtering).</param>
+            <param name="data">Data object (collection).</param>
+            <returns>A DataTables response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesExtensions.CreateResponse(DataTables.AspNet.Core.IDataTablesRequest,System.Int32,System.Int32,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Creates a DataTables response object.
+            </summary>
+            <param name="request">The DataTables request object.</param>
+            <param name="totalRecords">Total records count (total available non-filtered records on database).</param>
+            <param name="totalRecordsFiltered">Total filtered records (total available records after filtering).</param>
+            <param name="data">Data object (collection).</param>
+            <param name="additionalParameters">Adicional parameters dictionary.</param>
+            <returns>A DataTables response object.</returns>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.DataTablesJsonResult">
+            <summary>
+            Represents a custom JsonResult that can process IDataTablesResponse accordingly to settings.
+            </summary>
+        </member>
+        <member name="F:DataTables.AspNet.Mvc5.DataTablesJsonResult.DefaultContentType">
+            <summary>
+            Defines the default result content type.
+            </summary>
+        </member>
+        <member name="F:DataTables.AspNet.Mvc5.DataTablesJsonResult.DefaultContentEncoding">
+            <summary>
+            Defines the default result enconding.
+            </summary>
+        </member>
+        <member name="F:DataTables.AspNet.Mvc5.DataTablesJsonResult.DefaultRequestBehavior">
+            <summary>
+            Defines the default json request behavior.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesJsonResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Executes and writes result content into response.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.DataTablesRequest">
+            <summary>
+            For internal use only.
+            Represents a DataTables request.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.DataTablesResponse">
+            <summary>
+            Represents a response for DataTables.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.Draw">
+            <summary>
+            Gets draw count for validation and async ordering.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.Error">
+            <summary>
+            Gets error message, if not successful.
+            Should only be available for DataTables 1.10 and above.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.TotalRecords">
+            <summary>
+            Gets total record count (total records available on database).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.TotalRecordsFiltered">
+            <summary>
+            Gets filtered record count (total records available after filtering).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.Data">
+            <summary>
+            Gets data object (collection).
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.DataTablesResponse.AdditionalParameters">
+            <summary>
+            Gets aditional parameters for response.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.ToString">
+            <summary>
+            Converts this object to a Json compatible response using global naming convention for parameters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.IsSuccessResponse">
+            <summary>
+            For private use only.
+            Gets an indicator if this is a success response or an error response.
+            </summary>
+            <returns>True if it's a success response, False if it's an error response.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.SerializeData(System.Object)">
+            <summary>
+            Transforms a data object into a json element using Json.Net library.
+            Can be overriten when needed.
+            
+            Data will be serialized with camelCase convention by default, since it's a JavaScript standard.
+            This should not interfere with DataTables' CamelCase X HungarianNotation issue.
+            </summary>
+            <param name="data">Data object to be transformed to json.</param>
+            <returns>A json representation of your data.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.#ctor(System.Int32,System.String)">
+            <summary>
+            For internal use only.
+            Creates a new response instance.
+            </summary>
+            <param name="draw">Draw count from request object.</param>
+            <param name="errorMessage">Error message.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.#ctor(System.Int32,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            For internal use only.
+            Creates a new response instance.
+            </summary>
+            <param name="draw">Draw count from request object.</param>
+            <param name="errorMessage">Error message.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.#ctor(System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            For internal use only.
+            Creates a new response instance.
+            </summary>
+            <param name="draw">Draw count from request object.</param>
+            <param name="totalRecords">Total record count (total records available on database).</param>
+            <param name="totalRecordsFiltered">Filtered record count (total records available after filtering).</param>
+            <param name="data">Data object (collection).</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.#ctor(System.Int32,System.Int32,System.Int32,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            For internal use only.
+            Creates a new response instance.
+            </summary>
+            <param name="draw">Draw count from request object.</param>
+            <param name="totalRecords">Total record count (total records available on database).</param>
+            <param name="totalRecordsFiltered">Filtered record count (total records available after filtering).</param>
+            <param name="additionalParameters">Aditional parameters for response.</param>
+            <param name="data">Data object (collection).</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.Create(DataTables.AspNet.Core.IDataTablesRequest,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Creates a new response instance.
+            </summary>
+            <param name="request">The request object.</param>
+            <param name="totalRecords">Total record count (total records available on database).</param>
+            <param name="totalRecordsFiltered">Filtered record count (total records available after filtering).</param>
+            <param name="data">Data object (collection).</param>
+            <returns>The response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.Create(DataTables.AspNet.Core.IDataTablesRequest,System.Int32,System.Int32,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Creates a new response instance.
+            </summary>
+            <param name="request">The request object.</param>
+            <param name="totalRecords">Total record count (total records available on database).</param>
+            <param name="totalRecordsFiltered">Filtered record count (total records available after filtering).</param>
+            <param name="data">Data object (collection).</param>
+            <param name="additionalParameters">Aditional parameters for response.</param>
+            <returns>The response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.Create(DataTables.AspNet.Core.IDataTablesRequest,System.String)">
+            <summary>
+            Creates a new response instance.
+            </summary>
+            <param name="request">The request object.</param>
+            <param name="errorMessage">Error message.</param>
+            <returns>The response object.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.DataTablesResponse.Create(DataTables.AspNet.Core.IDataTablesRequest,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Creates a new response instance.
+            </summary>
+            <param name="request">The request object.</param>
+            <param name="errorMessage">Error message.</param>
+            <returns>The response object.</returns>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.ModelBinder">
+            <summary>
+            Represents a model binder for DataTables request element.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.ModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Binds request data/parameters/values into a 'IDataTablesRequest' element.
+            </summary>
+            <param name="controllerContext">Controller context for execution.</param>
+            <param name="bindingContext">Binding context for data/parameters/values.</param>
+            <returns>An IDataTablesRequest object or null if binding was not possible.</returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.ModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext,DataTables.AspNet.Core.IOptions,System.Func{System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext,System.Collections.Generic.IDictionary{System.String,System.Object}})">
+            <summary>
+            For internal and testing use only.
+            Binds request data/parameters/values into a 'IDataTablesRequest' element.
+            </summary>
+            <param name="controllerContext">Controller context for execution.</param>
+            <param name="bindingContext">Binding context for data/parameters/values.</param>
+            <param name="options">DataTables.AspNet global options.</param>
+            <returns>An IDataTablesRequest object or null if binding was not possible.</returns>
+        </member>
+        <member name="F:DataTables.AspNet.Mvc5.ModelBinder.ParseAdditionalParameters">
+            <summary>
+            Provides custom aditional parameters processing for your request.
+            You have to implement this to populate 'IDataTablesRequest' object with aditional (user-defined) request values.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.ModelBinder.ParseColumns(System.Web.Mvc.IValueProvider,DataTables.AspNet.Core.NameConvention.IRequestNameConvention)">
+            <summary>
+            For internal use only.
+            Parse column collection.
+            </summary>
+            <param name="values">Request parameters.</param>
+            <param name="names">Name convention for request parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.ModelBinder.ParseSorting(System.Collections.Generic.IEnumerable{DataTables.AspNet.Core.IColumn},System.Web.Mvc.IValueProvider,DataTables.AspNet.Core.NameConvention.IRequestNameConvention)">
+            <summary>
+            For internal use only.
+            Parse sort collection.
+            </summary>
+            <param name="columns">Column collection to use when parsing sort.</param>
+            <param name="values">Request parameters.</param>
+            <param name="names">Name convention for request parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.ModelBinder.Parse``1(System.Web.Mvc.ValueProviderResult,``0@)">
+            <summary>
+            Parses a possible raw value and transforms into a strongly-typed result.
+            </summary>
+            <typeparam name="ElementType">The expected type for result.</typeparam>
+            <param name="value">The possible request value.</param>
+            <param name="result">Returns the parsing result or default value for type is parsing failed.</param>
+            <returns>True if parsing succeeded, False otherwise.</returns>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.Options">
+            <summary>
+            Represents a configuration object for DataTables.AspNet.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.DefaultPageLength">
+            <summary>
+            Gets default page length when parameter is not set.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.IsDrawValidationEnabled">
+            <summary>
+            Gets an indicator if draw parameter should be validated.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.IsRequestAdditionalParametersEnabled">
+            <summary>
+            Gets an indicator whether request parameters parsing is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.IsResponseAdditionalParametersEnabled">
+            <summary>
+            Gets an indicator whether response parameters parsing is enabled or not.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.RequestNameConvention">
+            <summary>
+            Gets the request name convention to be used when resolving request parameters.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Options.ResponseNameConvention">
+            <summary>
+            Gets the response name convention to be used when serializing response elements.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.SetDefaultPageLength(System.Int32)">
+            <summary>
+            Sets the default page length to be used when request parameter is not set.
+            Page length is set to 10 by default.
+            </summary>
+            <param name="defaultPageLength">The new default page length to be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.EnableDrawValidation">
+            <summary>
+            Enables draw validation.
+            Draw validation is enabled by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.DisableDrawValidation">
+            <summary>
+            Disables draw validation.
+            As stated by jQuery DataTables, draw validation should not be disabled unless explicitly required.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.EnableRequestAdditionalParameters">
+            <summary>
+            Enables parsing request aditional parameters.
+            You must provide your own function for parameter resolution on DataTables.AspNet registration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.DisableRequestAdditionalParameters">
+            <summary>
+            Disables parsing request aditional parameters.
+            Aditional parameters are not resolved by default for security reasons.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.EnableResponseAdditionalParameters">
+            <summary>
+            Enables parsing response aditional parameters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.DisableResponseAdditionalParameters">
+            <summary>
+            Disables parsing response aditional parameters.
+            Aditional parameters are not resolved by default for security reasons.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.UseCamelCase">
+            <summary>
+            Forces DataTables to use CamelCase on request/respose parameter names.
+            CamelCase is enabled by default and is available for DataTables 1.10 and above.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.UseHungarianNotation">
+            <summary>
+            Forces DataTables to use HungarianNotation on request/response parameter names.
+            HungarianNotation is available for compatibility with older/legacy DataTables (prior to 1.10).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.#ctor">
+            <summary>
+            Creates a new 'Option' instance.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Options.#ctor(System.Int32,System.Boolean,System.Boolean,System.Boolean,DataTables.AspNet.Core.NameConvention.IRequestNameConvention,DataTables.AspNet.Core.NameConvention.IResponseNameConvention)">
+            <summary>
+            Creates a new 'Option' instance.
+            </summary>
+            <param name="defaultPageLength">Default page length to be used.</param>
+            <param name="enableDrawValidation">Indicates if draw validation will be enabled by default or not.</param>
+            <param name="enableRequestAdditionalParameters">Indicates whether request aditional parameters parsing is enabled or not.</param>
+            <param name="enableResponseAdditionalParameters">Indicates whether response aditional parameters parsing is enabled or not.</param>
+            <param name="requestNameConvention">Request naming convention to be used.</param>
+            <param name="responseNameConvention">Response naming convention to be used.</param>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.Search">
+            <summary>
+            Represents search/filter definition and value.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Search.Field">
+            <summary>
+            Gets the search data field if bound to a column.
+            Field for global search is null.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Search.IsRegex">
+            <summary>
+            Gets an indicator if search value is regex or plain text.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Search.Value">
+            <summary>
+            Gets search value.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Search.#ctor">
+            <summary>
+            Creates a new search instance.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Search.#ctor(System.String)">
+            <summary>
+            Creates a new search instance.
+            </summary>
+            <param name="field">Data field name to be bound.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Search.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates a new search instance.
+            </summary>
+            <param name="value">Search value.</param>
+            <param name="isRegex">True if search value is regex, False if search value is plain text.</param>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Search.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new search instance.
+            </summary>
+            <param name="value">Search value.</param>
+            <param name="isRegex">True if search value is regex, False if search value is plain text.</param>
+            <param name="field">Data field name to be bound.</param>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.Sort">
+            <summary>
+            Represents sort/ordering for columns.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Sort.Direction">
+            <summary>
+            Gets sort direction.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Sort.Field">
+            <summary>
+            Gets data field bound.
+            </summary>
+        </member>
+        <member name="P:DataTables.AspNet.Mvc5.Sort.Order">
+            <summary>
+            Gets sort order.
+            </summary>
+        </member>
+        <member name="M:DataTables.AspNet.Mvc5.Sort.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new sort instance.
+            </summary>
+            <param name="field">Data field to be bound.</param>
+            <param name="order">Sort order for multi-sorting.</param>
+            <param name="direction">Sort direction</param>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.NameConvention.CamelCaseRequestNameConvention">
+            <summary>
+            Represents CamelCase request naming convention for DataTables.AspNet.Mvc5.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.NameConvention.CamelCaseResponseNameConvention">
+            <summary>
+            Represents CamelCase response naming convention for DataTables.AspNet.Mvc5.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.NameConvention.HungarianNotationRequestNameConvention">
+            <summary>
+            Represents HungarianNotation request naming convention for DataTables.AspNet.Mvc5.
+            </summary>
+        </member>
+        <member name="T:DataTables.AspNet.Mvc5.NameConvention.HungarianNotationResponseNameConvention">
+            <summary>
+            Represents HungatianNotation response naming convention for DataTables.AspNet.Mvc5.
+            </summary>
+        </member>
+    </members>
+</doc>
